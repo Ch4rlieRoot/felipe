@@ -1,7 +1,7 @@
 ---
 - hosts: localhost
   collections:
-  - fortinet.fortios
+  - fortinet.fortios.fortios_system_automation_action
   vars:
    host: "192.168.122.182"
    username: "admin"
