@@ -7,7 +7,7 @@
    vdom: "root"
    ssl_verify: "False"
   tasks:
-  - name: Configure global attributes.
+  - name: Configureglobalattributes
     fortios_system_global:
       host:  "{{ host }}"
       vdom:  "{{ vdom }}"
