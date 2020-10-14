@@ -4,14 +4,18 @@
   - fortinet.fortios
   vars:
    host: "192.168.122.182"
+   username: "admin"
+   password: "abc123"
    vdom: "root"
    ssl_verify: "False"
   tasks:
-  - name: Configureglobalattributes
+  - name: Configure global attributes.
     fortios_system_global:
       host:  "{{ host }}"
+      username: "{{ username }}"
+      password: "{{ password }}"
       vdom:  "{{ vdom }}"
-      https: "True"
+      https: "False"
       ssl_verify:  "{{ ssl_verify }}"
       system_global:
         admintimeout: "23"
