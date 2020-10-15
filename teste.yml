@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: localhost
   collections:
   - fortinet.fortios.fortios_system_automation_action
   vars:
