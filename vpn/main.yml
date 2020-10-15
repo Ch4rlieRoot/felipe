@@ -1,0 +1,9 @@
+---
+ - name: "Incluindo variaveis especificas dos adquirentes {{ adq_file }}"
+   include_vars: "./adq/{{ adq_file }}"
+
+ - name: Configuracao da fase 1
+   import_tasks: fase1.yml
+
+ - name: Configuracao da fase 2
+   import_tasks: fase2.yml

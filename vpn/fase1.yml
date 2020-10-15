@@ -1,0 +1,24 @@
+---
+ - name: Configuracao da fase 1
+   fortios_vpn_ipsec_phase1_interface:
+     host: "{{ host }}"
+     username: "{{ username }}"
+     password: "{{ password }}"
+     vdom: "{{ vdom }}"
+     https: "True"
+     State: "present"
+     ssl_verify: "False"
+     vpn_ipsec_phase1_interface:
+       interface: "{{ interface }}"
+       name: "{{ vpn_name }}"
+       net_device: 'disable'
+       proposal: "{{ phase1_proposal }}"
+       peertype: 'any'
+       wizard_type: 'custom'
+       remote_gw: "{{ remote_gw }}"
+       psksecret: "{{ psksecret }}"
+       dhgrp: "{{ dhgrp }}"
+       ike_version: "{{ ike_version }}"
+       dpd: 'on-idle'
+       dpd_retryinterval: '5'
+       comments: "{{ comments }}"

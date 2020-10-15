@@ -1,0 +1,22 @@
+---
+customer: Banese
+env: prod
+hub: sp
+interface: 'port1'
+# Limite de 15 caracteres no nome da vpn
+vpn_name: 'vpn-banese-01'
+phase1_proposal: 'des-md5'
+phase2_proposal: 'des-sha512'
+auto_negotiate: 'enable'
+Phase2_keylife: '28800'
+remote_gw: '10.10.10.1'
+psksecret: 'abc123'
+dhgrp: '5'
+ike_version: '2'
+comments: 'sd-2299 vpn para Banese'
+target_region: 'sp-vpn-port1'
+
+networks:
+  - {remote_network: 10.20.30.0, remote_subnet: 255.255.255.0, local_network: 150.20.30.32, local_subnet: 255.255.255.0}
+  - {remote_network: 10.20.40.0, remote_subnet: 255.255.255.0, local_network: 150.20.30.32, local_subnet: 255.255.255.0}
+  - {remote_network: 10.20.50.0, remote_subnet: 255.255.255.0, local_network: 150.20.30.32, local_subnet: 255.255.255.0}
