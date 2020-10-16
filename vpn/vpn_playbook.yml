@@ -1,0 +1,23 @@
+---
+- hosts: localhost
+  vars:
+    host: "{{ target_region }}"
+    vdom: "root"
+    ssl_verify: "False"
+  vars_files:
+    - "./adq/{{ customer_file}}"
+
+  vars_prompt:
+    - name: username
+      prompt: username
+      private: no
+
+    - name: password
+      prompt: password
+      private: yes
+
+  tasks:
+    - name "Deploy da VPN no Fortinet"
+      include_role:
+        name: fortigate
+      when: executed_role is defined and (executed_role == 'fortigate')
